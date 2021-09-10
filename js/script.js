@@ -27,3 +27,37 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 console.log("Theme setting works!")
+
+//================================= MENU SHOW & HIDE ===========================================
+const navMenu = document.getElementById('nav-menu')
+const navToggle = document.getElementById('nav-toggle')
+const navClose = document.getElementById('nav-close')
+
+// ================  MENU SHOW  =============
+/*  Validate if the constant exists */
+if(navToggle){
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu')
+    })
+} 
+
+// ================  MENU HIDE  =============
+/*  Validate if the constant exists */
+if(navClose){
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu')
+    })
+} 
+
+console.log("Menu and setting working!")
+//================================= REMOVE MENU PROFILE ===========================================
+const navLink = document.querySelectorAll('.nav__link')
+
+function linkAction(){
+    const navMenu = document.getElementById('nav-menu')
+    // when we click on nav__links, we remove the show menu
+    navMenu.classList.remove('show-menu')
+}
+
+navLink.forEach(n => n.addEventListener('click', linkAction))
+console.log("Remove menu profile is working!")
