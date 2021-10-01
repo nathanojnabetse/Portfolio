@@ -795,3 +795,10 @@ img{
     color: blueviolet;
     margin-top: 5em;
 }
+
+#btninfo{
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 2em;
+}

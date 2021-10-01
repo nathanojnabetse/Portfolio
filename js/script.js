@@ -72,3 +72,17 @@ new Typewriter('#typewriter', {
 });
 console.log("Typewritter is working!")
 
+//================================= more info ===========================================
+
+const targetDiv = document.getElementById("moreinfo");
+const btn = document.getElementById("btninfo");
+
+btn.onclick = function(){
+    if (targetDiv.style.display !== "none") {
+        targetDiv.style.display = "none";
+        btn.innerText="Show more...";
+      } else {
+        targetDiv.style.display = "block";
+        btn.innerText="Show less"; 
+      }
+};
